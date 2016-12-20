@@ -13,7 +13,6 @@ and download the appropriate and matching subtitle file for each of the video fi
 """
 import glob
 import os
-#from bs4 import BeautifulSoup
 import urllib.request
 import sys
 import hashlib
@@ -57,7 +56,6 @@ def loadPath(video, folder):
 def get_hash_subDB(path):
     readsize = 64 * 1024
     with open(path, 'rb') as f:
-#        size = os.path.getsize(video)
         data = f.read(readsize)
         f.seek(-readsize, os.SEEK_END)
         data += f.read(readsize)
@@ -87,7 +85,6 @@ def downloadSubtitle_subDB(video, folder):
     req.add_header('User-Agent', user_agent)
     res = urllib.request.urlopen(req)
     subtitles = res.read()
-#    index = moviename.rfind('.')
     file_name = video + '.srt'
     subsCurrentPath = os.path.abspath(file_name)
     with open(file_name, 'wb') as f:
