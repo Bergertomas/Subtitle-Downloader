@@ -156,6 +156,7 @@ def getSubtitles(folder):
                     time.sleep(10)
                 except urllib.error.HTTPError as err:
                     print ("Couldn't find subtitles for the video(s). Sorry...")
+            downloadSubs = False
         else:
             print("Couldn't understand your input. please type again!")
     if not videoList:
