@@ -124,7 +124,7 @@ def getSubtitles(folder):
     while downloadSubs is True:
         user_choice = input("Would you like to download subtitles in English or in Hebrew?"
         " Enter 'e' or 'א' for English, and 'h' or 'ע' for Hebrew. Enter 'q' to exit.\n"
-        "You could also enter 'subDB' to search the subDB database:  ")
+        "You can also enter 'subDB' to search the subDB database:  ")
         if user_choice == "H" or user_choice == "h" or user_choice == "ע":
             for video in videoList:
                 print("מוריד כתוביות עבור " + video)
